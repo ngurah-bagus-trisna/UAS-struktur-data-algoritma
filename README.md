@@ -6,8 +6,6 @@ Kelas : IT201
 NIM   : 230401010136
 ```
 
----
-
 ## How to compile
 
 Di linux gunakan `g++`
