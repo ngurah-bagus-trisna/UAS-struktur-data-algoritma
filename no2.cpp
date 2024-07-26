@@ -41,7 +41,7 @@ int binarySearch(int arr[], int n, int target) {
     return -1; // export return -1 ketika value dalam array tidak ditemukan
 }
 
-// fungsi untuk 
+// fungsi untuk mencari array yang sudah di sorted, dan mencocokan dengan array default/orriginal_array. nantinya result yang ditampilkan menggunakan refrensi default array
 void findSortedArray(int original_arr[], int sorted_arr[], int n, int target) {
     int indexSudahSorted = binarySearch(sorted_arr, n, target);
 
