@@ -2,12 +2,16 @@
 // Kelas  : IT201
 // NIM    : 230401010136
 
+// iomanip saya gunakan untuk setwidth dalam print table
+
 #include <iomanip>
-#include <ios>
 #include <iostream>
 
 using namespace std;
 
+// Disini saya gunakan array 2 dimensi, dimensi pertama saya gunakan untuk menyimpan array nama, dimensi ke dua saya gunakan untuk menyimpan array alamat 
+
+// Buat function untuk buble sort, membandingkan data pertama atau disini saya buat dengan nama "sementaraNama/Alamat", dan nantinya akan saling ditukar/swap 
 void bubleSort(string listArr[][8], int n) {
   for (int i = 0; i < n; i++) {
     for (int j = 0; j < n-i-1; j++){
@@ -25,6 +29,8 @@ void bubleSort(string listArr[][8], int n) {
     }
   }
 }
+
+// buat function selectionSort, 
 
 void selectionSort(string listArr[][8], int n) {
   for (int i = 0; i < n-1; i++) {
@@ -47,6 +53,8 @@ void selectionSort(string listArr[][8], int n) {
   }
 }
 
+// Buat fungsi untuk output hasil result. Karena disini terdapat pengulangan 3 kali untuk print table.
+
 void outputResult(string listArr[][8], int n) {
   cout << setfill('-') << setw(41) << "-" << setfill(' ') << endl; 
   cout << left << setw(20) << "| Nama " << setw(20) << "| Alamat" << "|" << endl;
@@ -60,9 +68,6 @@ void outputResult(string listArr[][8], int n) {
 
 
 int main() {
-
-  // string nama[] = {"Fahmi", "Romi", "Andri", "Fadilah", "Ruli", "Rudi", "Dendi", "Zaki"};
-  // string alamat[] = {"Jakarta", "Solo", "Jakarta", "Banyuwangi", "Bandung", "Bali", "Purwokerto", "Madiun"};
 
   string listNamaAlamat [2][8] = {
     {"Fahmi", "Romi", "Andri", "Fadilah", "Ruli", "Rudi", "Dendi", "Zaki"},
@@ -82,4 +87,6 @@ int main() {
 
   selectionSort(listNamaAlamat, 8);
   outputResult(listNamaAlamat, 8);
+
+  return 0;
 }
